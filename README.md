@@ -24,5 +24,4 @@ This repository contains a defensive cybersecurity framework designed to prevent
 Pull requests, issues, and forks are welcome for improving simulations, test harnesses, and documentation.
 
 ## License
-MIT License (or whatever you choose)
 All rights reserved. For review/educational purposes only.
