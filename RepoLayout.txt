@@ -1,0 +1,48 @@
+PAMIS-ZT-WAN-PulseTrust/
+│
+├─ README.md
+├─ LICENSE
+├─ docs/
+│   ├─ whitepaper.pdf (optional condensed + RFI-style summary)
+│   ├─ diagrams.md (ASCII sketches / flowcharts)
+│   └─ PAMIS-ZT-WAN-Doctrine.md
+│
+├─ src/
+│   ├─ ztwan/
+│   │   ├─ ztwan_attest.lua
+│   │   ├─ ztwan_mtls.lua
+│   │   ├─ ztwan_integrity.lua
+│   │   ├─ ztwan_policy.lua
+│   │   ├─ ztwan_util.sh
+│   │   └─ ztwan.nft
+│   ├─ pamis_kernel/
+│   │   ├─ pamis.c
+│   │   ├─ pamis.h
+│   │   ├─ Makefile
+│   │   └─ Kconfig
+│   └─ pulsetrust/
+│       ├─ pulsetrust_core.c
+│       ├─ pulsetrust.h
+│       └─ sim_tests/
+│           ├─ sim_env.c
+│           └─ sim_rf.c
+│
+├─ examples/
+│   ├─ router_policy_example.json
+│   ├─ test_env_profile.json
+│   └─ rf_fingerprint_sample.txt
+│
+├─ package/  (OpenWrt overlay skeleton)
+│   ├─ ztwan-pamis/
+│   │   ├─ Makefile
+│   │   ├─ Config.in
+│   │   ├─ files/
+│   │   │   ├─ etc/ztwan/...
+│   │   │   ├─ usr/libexec/ztwan/...
+│   │   │   └─ etc/init.d/ztwan
+│   │   └─ pamis_kernel/...
+│
+└─ tests/
+    ├─ test_ztwan_integrity.lua
+    ├─ test_pamis_env.c
+    └─ test_pulsetrust_sim.c
